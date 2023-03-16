@@ -84,6 +84,7 @@ article{
     padding: 20px;
 }
 
+/* Quick navigator */
 #up{
     left: 0px;
     width: 20%;
@@ -124,24 +125,21 @@ article{
     left: 50px;
 }
 
-table{
-    border-collapse: 20px collapse;
-    letter-spacing: 1px;
-    border-spacing: 10px 10px;
-    width: 100%;
-    height: 50px;
+.experience{
+    display: flex;
+    
 }
-td{
-    text-align: center;
-    padding: 20px;
-    height: 40px;
-    vertical-align: middle;
+#exper1{
+    text-align: left;
+    padding: 10px;
+    flex: 4;
+}
+#exper01{
+    flex: 10;
+    padding: 10px;
+    left: 50px;
 }
 
-
-.exper{
-    text-align: center;
-}
 
 .skill{
   text-align: center;
@@ -175,18 +173,23 @@ footer{
     text-align: center;
     padding: 20px 10px;
     background: #677381;
-    margin: 16px;
+    box-shadow: 5px 10px #a7a5b4; 
+}
+
+/* Container for buttons */
+.btnsub{
     cursor: pointer;
-    box-shadow: 5px 10px #a7a5b4;
-    width: 10%;
+    width: 20%;
     margin: auto;
+    display: flex;
+    gap: 20px;
 }
 
 .btncont:hover{
     background-color: pink;
 }
     
-
+/* Container of photo and names */
 .contain{
     display: grid;
     gap: 10px;
@@ -195,24 +198,25 @@ footer{
 }
 
 
-
 /* nav has to be inside the intro div because they have to line without them having different classes*/
 #intro{
     grid-column: 2;
     text-align: start;
     font-size: x-large;
 
-    /* Animation of name  on header*/
+/* Animation of name  on header*/
     position: relative;
     animation-name: details;
     animation-duration: 3s;  
     animation-fill-mode: forwards;
 }
+
 @keyframes details {
     from {top: 0px;}
     to {top: 200px;}
   }
 
+  /*Photo placement*/
 #img{
    grid-column: 1;
    position: right;
@@ -223,6 +227,10 @@ footer{
     height: 380px;
     border-radius: 50% 50%;
     border: 2px solid white;
+}
+.photo:hover{
+    width: 450px;
+    height: 450px;
 }
 
 /* Head navigator */
@@ -272,11 +280,9 @@ li.dropdown {
     text-align: left;
 }
 
-
 .dropdown:hover .dropdown-content {
     display: block;
 }
-
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
@@ -296,17 +302,20 @@ li.dropdown {
     }
     li{
         float: none;
-        
     }
 
     .photo{
         width: 30vw;
         height: 25vh;
     }
+
+    .photo:hover{
+        width: 50vw;
+        height: 45vh;
+    }
      
     .img, .intro{
        flex-direction: column;
-    
     }
 
     article{
@@ -321,7 +330,6 @@ li.dropdown {
         padding-bottom: 15%;
         margin-bottom: -20%;
     }
-    
     .about{
         margin-bottom: 50%;
         font-size: 2.5vw;
@@ -341,8 +349,10 @@ li.dropdown {
         to {top: 30px;}
       }
 
+    .btnsub{
+        width: 50%;
+    }  
 
-    
 }
   /* Small devices (portrait tablets and large phones, 600px and down) */
   @media only screen and (max-width: 600px) {
@@ -369,6 +379,10 @@ li.dropdown {
             margin-bottom: 40%;
             font-size: 2.5vw;
             top:30%;
+        }
+        .photo:hover{
+            width: 230px;
+            height: 230px;
         }
   }
 
@@ -441,6 +455,7 @@ li.dropdown {
         padding-bottom: 15%;
         margin-bottom: -16%;
     }
+
   }
 
   /*Grid for form and icons */
@@ -456,8 +471,8 @@ li.dropdown {
 .social-icon{
     margin:16px;
     cursor: pointer;
-    width: 35%;
-    height: 30%;
+    width: 40%;
+    height: 35%;
 }
 
 .gridcont{
@@ -467,10 +482,5 @@ li.dropdown {
 
 .contactdet{
     grid-column: 4 / span 3;
-    grid-row: 1;
-    
-}
-
-.btnsub{
-    
+    grid-row: 1;   
 }
