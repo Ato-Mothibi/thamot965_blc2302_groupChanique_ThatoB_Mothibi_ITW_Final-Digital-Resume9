@@ -12,6 +12,7 @@ HTML: index.html
 -skills 
 -contact 
 -Back button
+-Up button
 
 CSS: stylesheet.css 
 -Optimising Images with CSS 
